@@ -1,0 +1,13 @@
+body {background:#1E4040;}
+
+.body {background: white; width:1200px; margin:0 auto;}
+
+.header,
+.page,
+.footer{border: 1px solid #ccc;position:relative;}
+
+
+
+.toolbar{background:green}
+.menu{background: gray; display: inline-block; width:166px; vertical-align: top;}
+.content{background: #fff8dc; display: inline-block; width:1000px;}
