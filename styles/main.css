@@ -11,3 +11,26 @@ body {background:#1E4040;}
 .toolbar{background:green}
 .menu{background: gray; display: inline-block; width:166px; vertical-align: top;}
 .content{background: #fff8dc; display: inline-block; width:1000px;}
+
+
+
+
+/*table styles*/
+
+.number_table{border: 1px solid red;
+    border-radius: 6px;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+}
+.number_table td{
+    text-align: center;
+    width: 50px;
+    height:50px;
+    cursor: pointer;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+opacity: 0.2;
+    border: 1px solid green}
+/*.number_table td:hover{background: red}*/
+
