@@ -26,17 +26,21 @@ body {background:#1E4040;}
 }
 .number_table td{
     text-align: center;
-    width: 50px;
-    height:50px;
+    width: 60px;
+    height:60px;
     cursor: pointer;
     border-radius: 3px;
     -moz-border-radius: 3px;
     -webkit-border-radius: 3px;
-opacity: 0.5;
-    font-size: 20px;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    user-select: none;
+
+    opacity: 0.5;
+    font-size: 24px;
     border: 1px solid green}
 /*.number_table td:hover{background: red}*/
 
 .number_table td div{position: relative;backgro1und: #7fffd4;}
-.number_table td span.num {position: absolute;top:-11px;right:15px}
-.number_table td span.word{display: none;}
+.number_table td span.num {position: absolute;top:-14px;right:18px;}
+.number_table td span.word{font-size:16px;display: none;}
