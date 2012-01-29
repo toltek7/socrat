@@ -18,6 +18,8 @@ body {background:#1E4040;}
 /*table styles*/
 
 .number_table{border: 1px solid red;
+    posit1ion: relative;
+
     border-radius: 6px;
     -moz-border-radius: 6px;
     -webkit-border-radius: 6px;
@@ -30,7 +32,11 @@ body {background:#1E4040;}
     border-radius: 3px;
     -moz-border-radius: 3px;
     -webkit-border-radius: 3px;
-opacity: 0.2;
+opacity: 0.5;
+    font-size: 20px;
     border: 1px solid green}
 /*.number_table td:hover{background: red}*/
 
+.number_table td div{position: relative;backgro1und: #7fffd4;}
+.number_table td span.num {position: absolute;top:-11px;right:15px}
+.number_table td span.word{display: none;}
