@@ -44,5 +44,5 @@ body {background:#1E4040;}
 .number_table td div{position: relative}
 .number_table td span.num {text-align:center}
 .number_table td.opened {cursor: default}
-.number_table td.opened span.num {position: absolute}
+.number_table td.opened span.num {position: absolute; right: 18px; top:-4px}
 .number_table td span.word{font-size:16px;display: none}
