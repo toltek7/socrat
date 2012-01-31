@@ -2,14 +2,18 @@
 
 var cellX = 10;
 var cellY = 10;
+
+var trackObj;
+
+
 var codesNumbers ={
     numb : new Array(),
     word : new Array()
 }
 //Note: 101 - max numbers of cell in html table
 var cellsMaxNum = 101;
-var startNumMin = 0;
-var startNumMax = 49;
+//var startNumMin = 0;
+//var startNumMax = 49;
 var randomArray = new Array(cellsMaxNum);
 function setRandomArray(min, max){
     for(var i = 0; i< cellsMaxNum; i++){
@@ -24,7 +28,7 @@ function readNumbersValues(xml){
         codesNumbers.numb.push($(this).attr("value"));
         codesNumbers.word.push($(this).text());
     });
-    setRandomArray(startNumMin,startNumMax);
+    setRandomArray(trackObj.leftValue,trackObj.rightValue);
 }
 
 function buildNumTableHtml(container, table, x, y) {
@@ -52,7 +56,9 @@ function initNumTable(table) {
         var $div = $('<div>');
         $div.append($cellWord.text(codesNumbers.word[randomArray[randomArray[i]]]));
         $div.append($cellNum.text(codesNumbers.numb[randomArray[randomArray[i]]]));
-        $(this).append($div);
+
+        $(this).removeClass('opened');
+        $(this).html($div);
 
         $(this).hover(
             function () {
@@ -80,6 +86,36 @@ function initNumTable(table) {
 }
 
 $(document).ready(function () {
+
+    $('#trackbar').trackbar({
+        width:500, // px
+        leftLimit:0, // unit of value
+        leftValue:0, // unit of value
+        rightLimit:100, // unit of value
+        rightValue:49, // unit of value
+        clearLimits:true,
+        clearValues:false,
+        allowOverrideBorders:false,
+        roundUp:1,
+        tickDivider:10,
+        tickRoundUp:1,
+        /*showSmallTicks: false,
+         showSmallTicks: false,
+         showBigTicksText: false,
+         precisePositioning: true,*/
+        id:"date"
+    });
+
+    trackObj = $.trackbar.getObject("date");
+    trackObj.onMouseUpMove = function () {
+        setRandomArray(trackObj.leftValue,trackObj.rightValue);
+        initNumTable('.number_table');
+//    alert(this.leftValue);
+    };
+
+//    alert(trackObj.leftValue);
+
+
 
     //http://www.switchonthecode.com/tutorials/xml-parsing-with-jquery
     $.ajax({

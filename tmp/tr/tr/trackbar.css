@@ -1,0 +1,55 @@
+/***************************************************************
+ *  JS-TrackBar
+ *
+ *   Copyright (C) 2008 by Alexander Burtsev - webew.ru
+ *   and abarmot - http://abarmot.habrahabr.ru/
+ *   desing: Svetlana Solovieva - http://my.mail.ru/bk/concur/
+ *
+ *  This code is a public domain.
+ ***************************************************************/
+
+ /***************************************************************
+ *
+ *    Code modifications by Mongoose - http://mongi.habrahabr.ru/     
+ *    
+ ***************************************************************/
+ 
+/* Reset */
+table.trackbar div, table.trackbar td {margin:0; padding:0; }
+table.trackbar {border-collapse:collapse;border-spacing:0;}
+table.trackbar img{border:0;}
+
+/* Styles */
+table.trackbar {position:relative; width:250px; margin: 10px 0px; z-index: 25; }
+table.trackbar .l {width:1%; text-align: right; z-index: 50;  font-size: 1px; background:transparent repeat-x url(./imgtrackbar/b_bg_off.gif) top left; background-size: 100px 50px;}
+table.trackbar .l div {position:relative; width:0; text-align: right; z-index:500; white-space:nowrap;}
+table.trackbar .l div img {cursor:pointer;}
+table.trackbar .l div span {position:absolute;top:-16px; right:6px; z-index:1000; font:11px tahoma; color:#000;}
+table.trackbar .l div span.limit {text-align:left; position:absolute;top:0px; right:100%; z-index:100; font:11px tahoma; color:#D0D0D0; margin-right: 12px;}
+table.trackbar .r {position:relative; width:1%; text-align: left; font-size: 1px;z-index: 50;  background:transparent repeat-x url(./imgtrackbar/b_bg_off.gif) top right; cursor:default;}
+table.trackbar .r div {position:relative; width:0; text-align: left; z-index:500; white-space:nowrap;}
+table.trackbar .r div img {cursor:pointer;}
+table.trackbar .r div span {position:absolute;top:-16px; left:6px; z-index:1000; font:11px tahoma; color:#000;}
+table.trackbar .r div span.limit {position:absolute;top:0px; left:100%; z-index:100; font:11px tahoma; color:#D0D0D0; margin-left: 12px;}
+table.trackbar .c {font-size:1px; width:100%;z-index: 100; background:repeat-x url(./imgtrackbar/b_bg_on.gif) top left;filter:alpha(opacity=75);-moz-opacity:.75;opacity:.75;}
+
+/* Scale styles */
+div.scale{
+font-family:tahoma;
+font-size:11px;
+font-size-adjust:none;
+font-stretch:normal;
+font-style:normal;
+font-variant:normal;
+font-weight:normal;
+line-height:normal;
+
+}
+
+div.scale {position:relative; background-color: white; width:100%; z-index:10; margin-top: -27px; margin-left: 0px; padding-bottom: 0px;}
+div.scale div{padding-bottom:20px;position:relative;margin-left: 0px;}
+div.scale div.t{background:transparent repeat-x url(./imgtrackbar/tick_s.gif) top left; width: 1px; float: left; }
+div.scale div.b{background:transparent repeat-x url(./imgtrackbar/blank.gif) top left; float: left; }
+div.scale div.tl{ width: 1px; background:transparent repeat-x url(./imgtrackbar/tick_l.gif) top left; float: left;}
+div.scale div.bt{position:absolute; width: 1px; font:10px tahoma; color:#C0C0C0; float: left; padding-bottom: 0px;}
+div.scale div.ticktext{ position:absolute; width: 100%; text-align: left; margin-top: 15px; margin-left: -14px;}
