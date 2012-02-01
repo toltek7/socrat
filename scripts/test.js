@@ -92,7 +92,7 @@ $(document).ready(function () {
         leftLimit:0, // unit of value
         leftValue:0, // unit of value
         rightLimit:100, // unit of value
-        rightValue:49, // unit of value
+        rightValue:80, // unit of value
         clearLimits:true,
         clearValues:false,
         allowOverrideBorders:false,
@@ -130,6 +130,11 @@ $(document).ready(function () {
 
     buildNumTableHtml('.wdt_1200','.number_table',8,6);
     initNumTable('.number_table');
+/*
 
-//    $("#slider").slider();
+    $(".timer").everyTime(100, function(i) {
+        $(this).text(i);
+    });
+*/
+
 });
