@@ -1,0 +1,1 @@
+tests for better  studying of mnemonics methods
